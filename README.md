@@ -134,8 +134,5 @@ npm run dev
 The frontend will now be running at `http://localhost:5173` and will communicate with the backend at `http://localhost:8000/api/`. Ensure the backend server is running before accessing protected routes.
 
 ---
----
-
 📌 **Author:** [Mohamed Amine Amira](https://github.com/MohamedAmineAmira)  
-📌 **License:** MIT
 
