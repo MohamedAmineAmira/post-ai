@@ -1,53 +1,149 @@
-Let me generate a comprehensive README for your PostAI project:
+# 🚀 PostAI Backend & Frontend
 
-# PostAI Project Overview
+PostAI is an AI-powered social media post generation platform. The backend, built with **Django**, handles authentication, post management, and AI communication. The frontend, developed with **Vue.js** and **Vite**, provides an interactive interface for users.
 
-PostAI is a full-stack application that enables users to generate and manage social media posts using artificial intelligence. The project combines a Django backend with a Vue.js frontend to create a seamless experience for generating and managing AI-powered content.
+---
 
-## Core Features
+## 🏗 Backend Structure
 
-- AI-powered post generation
-- User authentication and authorization
-- Secure API endpoints
-- Responsive frontend interface
-- Real-time post management
-
-## Technical Stack
-
-- Backend: Django
-- Frontend: Vue.js with Vite
-- Database: SqlLite
-- API Integration: OpenAI API
-
-
-## Getting Started
-
-Clone the repository```bash
-git clone https://github.com/MohamedAmineAmira/post-ai.git
+```plaintext
+- postit_backend/
+  ├── core/       # Common settings and utility functions
+  ├── auth/       # Authentication (login, registration, token refresh)
+  ├── abstract/   # Abstract components and reusable configurations
+  ├── post/       # Post-related models, serializers, and API endpoints
+  ├── user/       # User-related views and models
 ```
 
-Set up environment variables- Backend: Create `.env` file in backend directory
-- Frontend: Create `.env` file in frontend directory
+## 🏗 Frontend Structure
 
-Start services- Run backend server: `cd postit_backend && python manage.py runserver`
-- Run frontend development server: `cd frontend && npm run dev`
+```plaintext
+src/
+├── assets/                    # Static assets (images, logos)
+├── components/                # Reusable UI components
+├── Landing/                   # Landing page components
+│   ├── Navbar.vue
+│   ├── HeroSection.vue
+│   ├── Features.vue
+│   ├── About.vue
+│   └── Footer.vue
+├── pages/                     # Main application pages
+│   ├── LandingPage.vue       # Combines landing components
+│   ├── LoginPage.vue         # Login form
+│   ├── RegisterPage.vue      # Registration form
+│   └── HomePage.vue          # Main interface with PostForm and GeneratedPost
+├── router/                   # Routing configuration
+│   └── index.js              # Route definitions
+├── services/                 # Service utilities
+│   └── axiosInstance.js      # Centralized Axios instance
+├── App.vue                   # Root component
+├── main.js                   # Application entry point
+└── styles/                   # Global styles
+```
 
-## Project Structure
+---
 
-post-ai/
-├── postit_backend/      # Backend implementation
-└── frontend/            # Frontend implementation## Development Guidelines
+## 🔧 Backend Setup Instructions
 
-- Backend API endpoints follow REST conventions
-- Frontend components are organized by feature
-- State management uses Pinia stores
-- API calls are centralized in service modules
+### 1️⃣ Clone the Repository
 
-## Security Considerations
+```bash
+git clone https://github.com/MohamedAmineAmira/post_ai.git
+cd post_ai
+```
 
-- Environment variables are required for sensitive data
-- Authentication tokens are stored securely
-- API requests include proper authorization headers
-- Input validation occurs on both frontend and backend
+### 2️⃣ Backend Setup
 
-Refer to the respective README files in each directory for detailed setup and implementation details specific to the frontend and backend components.
+Navigate to the **backend directory**:
+
+```bash
+cd postit_backend
+```
+
+Set up a **virtual environment**:
+
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+```bash
+# On Linux/macOS:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a **`.env` file**:
+
+```bash
+echo "OPENAI_API_KEY=your_api_key_here" > .env
+```
+
+Apply **database migrations**:
+
+```bash
+python manage.py migrate
+```
+
+Start the **Django development server**:
+
+```bash
+python manage.py runserver
+```
+
+---
+
+## 🔧 Frontend Setup Instructions
+
+### 1️⃣ Create the Vue.js Project
+
+```bash
+npm create vite@latest frontend -- --template vue
+cd frontend
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install vue-router axios
+```
+
+### 3️⃣ Configure Environment Variables
+
+Create a **`.env` file** in the project root:
+
+```env
+VITE_API_URL=http://localhost:8000/
+```
+
+### 4️⃣ Start the Development Server
+
+```bash
+npm run dev
+```
+
+The frontend will now be running at `http://localhost:5173` and will communicate with the backend at `http://localhost:8000/api/`. Ensure the backend server is running before accessing protected routes.
+
+---
+
+## ✅ Next Steps
+
+- Configure environment variables properly in `.env`
+- Ensure **database setup** is correct (`sqlite` by default, change if needed)
+- Implement authentication and API testing with **Postman** or **cURL**
+- Connect the frontend to the backend via API requests
+
+---
+
+📌 **Author:** [Mohamed Amine Amira](https://github.com/MohamedAmineAmira)  
+📌 **License:** MIT
+
