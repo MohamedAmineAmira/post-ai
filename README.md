@@ -134,14 +134,6 @@ npm run dev
 The frontend will now be running at `http://localhost:5173` and will communicate with the backend at `http://localhost:8000/api/`. Ensure the backend server is running before accessing protected routes.
 
 ---
-
-## ✅ Next Steps
-
-- Configure environment variables properly in `.env`
-- Ensure **database setup** is correct (`sqlite` by default, change if needed)
-- Implement authentication and API testing with **Postman** or **cURL**
-- Connect the frontend to the backend via API requests
-
 ---
 
 📌 **Author:** [Mohamed Amine Amira](https://github.com/MohamedAmineAmira)  
