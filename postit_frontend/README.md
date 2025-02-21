@@ -1,13 +1,52 @@
-# Amazing Vue 3 Landing Page
+# Frontend Setup
 
-Welcome to our amazing Vue 3 landing page! This impressive landing page has been meticulously crafted using the latest Vue.js 3 features and directives, showcasing the power and versatility of Vue.js in modern web development.
+The frontend is built using Vue.js with Vite for fast development. It allows users to interact with the backend and generate posts.
 
-## Key Features
+### Project Structure
 
-- **Vue 3 Framework:** Built with Vue 3, the progressive JavaScript framework for building user interfaces.
-- **Latest Directives:** Harnesses the power of Vue.js latest directives to create dynamic and interactive user experiences.
-- **Setup Script API:** Implements the setup script API for a clean and efficient project setup, enabling seamless development.
+```text
+src/
+├── assets/                    # Static assets (images, logos)
+├── components/                # Reusable UI components
+├── Landing/                   # Landing page components
+│   ├── Navbar.vue
+│   ├── HeroSection.vue
+│   ├── Features.vue
+│   ├── About.vue
+│   └── Footer.vue
+├── pages/                     # Main application pages
+│   ├── LandingPage.vue       # Combines landing components
+│   ├── LoginPage.vue         # Login form
+│   ├── RegisterPage.vue      # Registration form
+│   └── HomePage.vue          # Main interface with PostForm and GeneratedPost
+├── router/                   # Routing configuration
+│   └── index.js              # Route definitions
+├── services/                 # Service utilities
+│   └── axiosInstance.js      # Centralized Axios instance
+├── App.vue                   # Root component
+├── main.js                   # Application entry point
+└── styles/                   # Global styles
+```
 
-## Overview
+## Setup Instructions
 
-This landing page serves as a testament to Vue.js's capabilities, providing a glimpse into the future of web development. With a focus on user interactivity and a sleek design, this project demonstrates the art of combining technology with creativity.
+Create a new Vue.js project with Vite```bash
+npm create vite@latest frontend -- --template vue
+cd frontend
+```
+
+Install dependencies```bash
+npm install vue-router axios
+```
+
+Configure environment variablesCreate a `.env` file in the project root:
+
+```env
+VITE_API_URL=http://localhost:8000/
+```
+
+Start the development server```bash
+npm run dev
+```
+
+The frontend will now be running at `http://localhost:5173` and will communicate with the backend at `http://localhost:8000/api/`. Make sure the backend server is running before accessing protected routes.
