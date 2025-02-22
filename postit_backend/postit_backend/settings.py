@@ -17,7 +17,12 @@ SECRET_KEY = "django-insecure-ojn&gku+4rmt)!!3e7=t=6!avh^n73hrrbzl+s0y3x-(o%&mca
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "post-ai-production.up.railway.app",
+    "localhost",
+    "127.0.0.1"
+]
+
 
 # Allow requests from your frontend origin
 CORS_ALLOWED_ORIGINS = [
