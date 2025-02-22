@@ -26,7 +26,7 @@ ALLOWED_HOSTS = [
 
 # Allow requests from your frontend origin
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173','https://perpetual-nature-production-911f.up.railway.app' # Your frontend URL
+    'http://localhost:5173','https://perpetual-nature-production-911f.up.railway.app:8000' # Your frontend URL
 ]
 
 # Optional: Allow credentials (needed for authenticated requests)
