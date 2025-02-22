@@ -9,8 +9,8 @@ PostAI is an AI-powered social media post generation platform. The backend, buil
 ```plaintext
 - postit_backend/
   ├── core/       # Common settings and utility functions
-  ├── auth/       # Authentication (login, registration, token refresh)
-  ├── abstract/   # Abstract components and reusable configurations
+    ├── auth/       # Authentication (login, registration, token refresh)
+    ├── abstract/   # Abstract components and reusable configurations
   ├── post/       # Post-related models, serializers, and API endpoints
   ├── user/       # User-related views and models
 ```
