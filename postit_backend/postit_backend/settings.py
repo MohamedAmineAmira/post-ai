@@ -21,7 +21,7 @@ ALLOWED_HOSTS = []
 
 # Allow requests from your frontend origin
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',  # Your frontend URL
+    'http://localhost:5173', # Your frontend URL
 ]
 
 # Optional: Allow credentials (needed for authenticated requests)
